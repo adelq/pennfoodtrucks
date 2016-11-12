@@ -1,0 +1,94 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @food_truck.name %>
+</p>
+
+<p>
+  <strong>Cleanurl:</strong>
+  <%= @food_truck.cleanURL %>
+</p>
+
+<p>
+  <strong>Rating:</strong>
+  <%= @food_truck.rating %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @food_truck.phone %>
+</p>
+
+<p>
+  <strong>Mf open:</strong>
+  <%= @food_truck.MF_open %>
+</p>
+
+<p>
+  <strong>Mf close:</strong>
+  <%= @food_truck.MF_close %>
+</p>
+
+<p>
+  <strong>Sa open:</strong>
+  <%= @food_truck.Sa_open %>
+</p>
+
+<p>
+  <strong>Sa close:</strong>
+  <%= @food_truck.Sa_close %>
+</p>
+
+<p>
+  <strong>Su open:</strong>
+  <%= @food_truck.Su_open %>
+</p>
+
+<p>
+  <strong>Su close:</strong>
+  <%= @food_truck.Su_close %>
+</p>
+
+<p>
+  <strong>Genrebig:</strong>
+  <%= @food_truck.genreBig %>
+</p>
+
+<p>
+  <strong>Genresmall1:</strong>
+  <%= @food_truck.genreSmall1 %>
+</p>
+
+<p>
+  <strong>Genresmall2:</strong>
+  <%= @food_truck.genreSmall2 %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @food_truck.location %>
+</p>
+
+<p>
+  <strong>Blurb:</strong>
+  <%= @food_truck.blurb %>
+</p>
+
+<p>
+  <strong>Long:</strong>
+  <%= @food_truck.long %>
+</p>
+
+<p>
+  <strong>Lat:</strong>
+  <%= @food_truck.lat %>
+</p>
+
+<p>
+  <strong>Intersection:</strong>
+  <%= @food_truck.intersection %>
+</p>
+
+<%= link_to 'Edit', edit_food_truck_path(@food_truck) %> |
+<%= link_to 'Back', food_trucks_path %>

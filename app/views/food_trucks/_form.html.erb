@@ -1,0 +1,89 @@
+<%= form_for(@food_truck) do |f| %>
+  <% if @food_truck.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@food_truck.errors.count, "error") %> prohibited this food_truck from being saved:</h2>
+
+      <ul>
+      <% @food_truck.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_area :name %>
+  </div>
+  <div class="field">
+    <%= f.label :cleanURL %><br>
+    <%= f.text_area :cleanURL %>
+  </div>
+  <div class="field">
+    <%= f.label :rating %><br>
+    <%= f.text_field :rating %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br>
+    <%= f.number_field :phone %>
+  </div>
+  <div class="field">
+    <%= f.label :MF_open %><br>
+    <%= f.text_field :MF_open %>
+  </div>
+  <div class="field">
+    <%= f.label :MF_close %><br>
+    <%= f.text_field :MF_close %>
+  </div>
+  <div class="field">
+    <%= f.label :Sa_open %><br>
+    <%= f.text_field :Sa_open %>
+  </div>
+  <div class="field">
+    <%= f.label :Sa_close %><br>
+    <%= f.text_field :Sa_close %>
+  </div>
+  <div class="field">
+    <%= f.label :Su_open %><br>
+    <%= f.text_field :Su_open %>
+  </div>
+  <div class="field">
+    <%= f.label :Su_close %><br>
+    <%= f.text_field :Su_close %>
+  </div>
+  <div class="field">
+    <%= f.label :genreBig %><br>
+    <%= f.text_field :genreBig %>
+  </div>
+  <div class="field">
+    <%= f.label :genreSmall1 %><br>
+    <%= f.text_field :genreSmall1 %>
+  </div>
+  <div class="field">
+    <%= f.label :genreSmall2 %><br>
+    <%= f.text_field :genreSmall2 %>
+  </div>
+  <div class="field">
+    <%= f.label :location %><br>
+    <%= f.text_area :location %>
+  </div>
+  <div class="field">
+    <%= f.label :blurb %><br>
+    <%= f.text_area :blurb %>
+  </div>
+  <div class="field">
+    <%= f.label :long %><br>
+    <%= f.text_field :long %>
+  </div>
+  <div class="field">
+    <%= f.label :lat %><br>
+    <%= f.text_field :lat %>
+  </div>
+  <div class="field">
+    <%= f.label :intersection %><br>
+    <%= f.text_area :intersection %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

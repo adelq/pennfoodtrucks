@@ -1,0 +1,41 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyText
+  cleanURL: MyText
+  rating: 1.5
+  phone: 1
+  MF_open: MyString
+  MF_close: MyString
+  Sa_open: MyString
+  Sa_close: MyString
+  Su_open: MyString
+  Su_close: MyString
+  genreBig: MyString
+  genreSmall1: MyString
+  genreSmall2: MyString
+  location: MyText
+  blurb: MyText
+  long: 9.99
+  lat: 9.99
+  intersection: MyText
+
+two:
+  name: MyText
+  cleanURL: MyText
+  rating: 1.5
+  phone: 1
+  MF_open: MyString
+  MF_close: MyString
+  Sa_open: MyString
+  Sa_close: MyString
+  Su_open: MyString
+  Su_close: MyString
+  genreBig: MyString
+  genreSmall1: MyString
+  genreSmall2: MyString
+  location: MyText
+  blurb: MyText
+  long: 9.99
+  lat: 9.99
+  intersection: MyText

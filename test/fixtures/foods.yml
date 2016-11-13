@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type: 
+  name: MyText
+  price: 9.99
+  text: 
+  food_truck_id: 
+
+two:
+  type: 
+  name: MyText
+  price: 9.99
+  text: 
+  food_truck_id: 

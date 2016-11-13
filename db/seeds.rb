@@ -40,3 +40,18 @@ csv.each do |row|
 end
 
 puts "There are now #{Food.count} foods in the database."
+
+# Import truck visits
+csv_text = File.read(Rails.root.join('lib', 'seeds', 'truckVisits.csv'))
+csv = CSV.parse(csv_text, :headers => true)
+csv.each do |row|
+  vi = Visit.new
+  vi.food_truck_id = row['ft_id']
+  vi.timestamp = row['timestamp']
+  vi.ip = row['ip']
+  vi.public = row['displayVisit']
+  vi.save
+  puts "Visit to #{vi.food_truck.name} saved"
+end
+
+puts "There are now #{Visit.count} visits in the database."

@@ -22,4 +22,21 @@ csv.each do |row|
   puts "#{ft.name} saved"
 end
 
-puts "There are now #{FoodTruck.count} rows in the table"
+puts "There are now #{FoodTruck.count} food trucks"
+
+# Import foods
+csv_text = File.read(Rails.root.join('lib', 'seeds', 'foods.csv'))
+csv = CSV.parse(csv_text, :headers => true)
+csv.each do |row|
+  row_hash = row.to_hash.transform_keys { |key| key.sub(/^fd_/, '')}
+  fd = Food.new
+  fd.food_truck_id = row_hash['ft_id']
+  fd.type = row_hash['type']
+  fd.name = row_hash['name']
+  fd.price = row_hash['largePrice']
+  fd.comments = row_hash['comments'].strip
+  fd.save
+  puts "#{fd.name} saved"
+end
+
+puts "There are now #{Food.count} foods in the database."

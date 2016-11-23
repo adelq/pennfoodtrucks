@@ -4,12 +4,12 @@ one:
   type: 
   name: MyText
   price: 9.99
-  text: 
+  comments: 
   food_truck_id: 
 
 two:
   type: 
   name: MyText
   price: 9.99
-  text: 
+  comments: 
   food_truck_id: 

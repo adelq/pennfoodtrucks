@@ -69,6 +69,6 @@ class VisitsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def visit_params
-      params.require(:visit).permit(:time, :ip, :public, :food_truck_id)
+      params.require(:visit).permit(:timestamp, :ip, :public, :food_truck_id)
     end
 end

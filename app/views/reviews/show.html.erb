@@ -1,0 +1,79 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Food truck:</strong>
+  <%= @review.food_truck %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @review.title %>
+</p>
+
+<p>
+  <strong>Owner:</strong>
+  <%= @review.owner %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @review.email %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @review.date %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @review.comment %>
+</p>
+
+<p>
+  <strong>Overall:</strong>
+  <%= @review.overall %>
+</p>
+
+<p>
+  <strong>Quality:</strong>
+  <%= @review.quality %>
+</p>
+
+<p>
+  <strong>Speed:</strong>
+  <%= @review.speed %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @review.quantity %>
+</p>
+
+<p>
+  <strong>Bang:</strong>
+  <%= @review.bang %>
+</p>
+
+<p>
+  <strong>Friendliness:</strong>
+  <%= @review.friendliness %>
+</p>
+
+<p>
+  <strong>Display rev:</strong>
+  <%= @review.display_rev %>
+</p>
+
+<p>
+  <strong>Owner ip:</strong>
+  <%= @review.owner_ip %>
+</p>
+
+<p>
+  <strong>Staff:</strong>
+  <%= @review.staff %>
+</p>
+
+<%= link_to 'Edit', edit_review_path(@review) %> |
+<%= link_to 'Back', reviews_path %>

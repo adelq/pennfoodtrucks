@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Reviews</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Food truck</th>
+      <th>Title</th>
+      <th>Owner</th>
+      <th>Email</th>
+      <th>Date</th>
+      <th>Comment</th>
+      <th>Overall</th>
+      <th>Quality</th>
+      <th>Speed</th>
+      <th>Quantity</th>
+      <th>Bang</th>
+      <th>Friendliness</th>
+      <th>Display rev</th>
+      <th>Owner ip</th>
+      <th>Staff</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @reviews.each do |review| %>
+      <tr>
+        <td><%= review.food_truck %></td>
+        <td><%= review.title %></td>
+        <td><%= review.owner %></td>
+        <td><%= review.email %></td>
+        <td><%= review.date %></td>
+        <td><%= review.comment %></td>
+        <td><%= review.overall %></td>
+        <td><%= review.quality %></td>
+        <td><%= review.speed %></td>
+        <td><%= review.quantity %></td>
+        <td><%= review.bang %></td>
+        <td><%= review.friendliness %></td>
+        <td><%= review.display_rev %></td>
+        <td><%= review.owner_ip %></td>
+        <td><%= review.staff %></td>
+        <td><%= link_to 'Show', review %></td>
+        <td><%= link_to 'Edit', edit_review_path(review) %></td>
+        <td><%= link_to 'Destroy', review, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Review', new_review_path %>

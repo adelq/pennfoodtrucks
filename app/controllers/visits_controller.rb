@@ -62,13 +62,14 @@ class VisitsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_visit
-      @visit = Visit.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def visit_params
-      params.require(:visit).permit(:timestamp, :ip, :public, :food_truck_id)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_visit
+    @visit = Visit.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def visit_params
+    params.require(:visit).permit(:timestamp, :ip, :public, :food_truck_id)
+  end
 end

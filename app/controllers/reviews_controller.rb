@@ -62,13 +62,17 @@ class ReviewsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_review
-      @review = Review.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def review_params
-      params.require(:review).permit(:food_truck_id, :title, :owner, :email, :date, :comment, :overall, :quality, :speed, :quantity, :bang, :friendliness, :display_rev, :owner_ip, :staff)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_review
+    @review = Review.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def review_params
+    params.require(:review).permit(:food_truck_id, :title, :owner, :email,
+                                   :date, :comment, :overall, :quality, :speed,
+                                   :quantity, :bang, :friendliness,
+                                   :display_rev, :owner_ip, :staff)
+  end
 end

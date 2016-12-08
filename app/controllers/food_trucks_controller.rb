@@ -62,13 +62,18 @@ class FoodTrucksController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_food_truck
-      @food_truck = FoodTruck.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def food_truck_params
-      params.require(:food_truck).permit(:name, :cleanURL, :rating, :phone, :MF_open, :MF_close, :Sa_open, :Sa_close, :Su_open, :Su_close, :genreBig, :genreSmall1, :genreSmall2, :location, :blurb, :long, :lat, :intersection)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_food_truck
+    @food_truck = FoodTruck.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def food_truck_params
+    params.require(:food_truck).permit(:name, :cleanURL, :rating, :phone,
+                                       :MF_open, :MF_close, :Sa_open, :Sa_close,
+                                       :Su_open, :Su_close, :genreBig,
+                                       :genreSmall1, :genreSmall2, :location,
+                                       :blurb, :long, :lat, :intersection)
+  end
 end

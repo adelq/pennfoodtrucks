@@ -1,1 +1,1 @@
-json.partial! "visits/visit", visit: @visit
+json.partial! 'visits/visit', visit: @visit

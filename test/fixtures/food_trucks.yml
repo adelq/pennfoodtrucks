@@ -1,6 +1,6 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
+ft:
   name: MyText
   cleanURL: MyText
   rating: 1.5

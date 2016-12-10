@@ -4,10 +4,10 @@ one:
   timestamp: 2016-11-13 12:25:07
   ip: MyString
   public: false
-  food_truck_id: 
+  food_truck: ft
 
 two:
   timestamp: 2016-11-13 12:25:07
   ip: MyString
   public: false
-  food_truck_id: 
+  food_truck: ft

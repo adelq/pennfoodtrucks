@@ -2,7 +2,7 @@ require 'test_helper'
 
 class FoodTrucksControllerTest < ActionController::TestCase
   setup do
-    @food_truck = food_trucks(:one)
+    @food_truck = food_trucks(:ft)
   end
 
   test "should get index" do

@@ -15,9 +15,9 @@ To get started, just run:
 
 ## TODO
 
- - [ ] Data import
+ - [X] Data import
  - [ ] Homepage
- - [ ] Users + Login
+ - [X] Users + Login
  - [ ] Food Trucks
  - [ ] Reviews
  - [ ] Design/UI/UX

@@ -5,6 +5,17 @@
   <div id="map" style='width: 800px; height: 400px;'></div>
 </div>
 
+<h2>Recently Visited Trucks</h2>
+
+<ul>
+<% @recent_visits.each do |visit| %>
+    <li>
+        <%= link_to visit.food_truck.name, visit.food_truck %>,
+        <%= distance_of_time_in_words Time.now, visit.timestamp %> ago.
+    </li>
+<% end %>
+</ul>
+
 <script>
 handler = Gmaps.build('Google');
 handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){

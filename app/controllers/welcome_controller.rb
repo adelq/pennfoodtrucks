@@ -6,5 +6,6 @@ class WelcomeController < ApplicationController
       marker.lng ft.lat.to_f
       marker.infowindow ft.name
     end
+    @recent_visits = Visit.order('timestamp DESC').limit(10)
   end
 end

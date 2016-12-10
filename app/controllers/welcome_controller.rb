@@ -7,5 +7,6 @@ class WelcomeController < ApplicationController
       marker.infowindow ft.name
     end
     @recent_visits = Visit.order('timestamp DESC').limit(10)
+    @featured = FoodTruck.offset(rand(FoodTruck.count)).first
   end
 end

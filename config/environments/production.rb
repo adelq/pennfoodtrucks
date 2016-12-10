@@ -79,4 +79,7 @@ Rails.application.configure do
 
   # Specify host for production
   config.action_mailer.default_url_options = { host: 'pennfoodtrucks.herokuapp.com' }
+
+  # Heroku + Devise configuration
+  config.assets.initialize_on_precompile = false
 end

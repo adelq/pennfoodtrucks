@@ -24,4 +24,4 @@ To get started, just run:
 
 ## Author and License
 
-Adel Qalieh, MIT Licensed
+Adel Qalieh, [MIT Licensed](LICENSE)

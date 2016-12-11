@@ -1,4 +1,6 @@
 class FoodTruck < ActiveRecord::Base
+  has_many :reviews
+
   def open?
     dow = dow_to_initials(Time.now.wday)
     open = self["#{dow}_open"]

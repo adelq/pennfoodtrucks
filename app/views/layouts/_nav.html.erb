@@ -16,9 +16,9 @@
         <%= nav_link 'Home', root_path %>
         <%= nav_link 'Food Trucks', food_trucks_path %>
       </ul>
-      <% if user_signed_in? %>
-        <p class="navbar-text navbar-right">Signed in as <%= current_user.email %></p>
-      <% end %>
+      <ul class="nav navbar-nav navbar-right">
+        <%= render 'devise/menu/nav' %>
+      </ul>
     </div>
   </div>
 </nav>

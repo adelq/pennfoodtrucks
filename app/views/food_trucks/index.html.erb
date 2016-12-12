@@ -2,59 +2,23 @@
 
 <h1>Listing Food Trucks</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Cleanurl</th>
-      <th>Rating</th>
-      <th>Phone</th>
-      <th>Mf open</th>
-      <th>Mf close</th>
-      <th>Sa open</th>
-      <th>Sa close</th>
-      <th>Su open</th>
-      <th>Su close</th>
-      <th>Genrebig</th>
-      <th>Genresmall1</th>
-      <th>Genresmall2</th>
-      <th>Location</th>
-      <th>Blurb</th>
-      <th>Long</th>
-      <th>Lat</th>
-      <th>Intersection</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @food_trucks.each do |food_truck| %>
-      <tr>
-        <td><%= food_truck.name %></td>
-        <td><%= food_truck.cleanURL %></td>
-        <td><%= food_truck.rating %></td>
-        <td><%= food_truck.phone %></td>
-        <td><%= food_truck.MF_open %></td>
-        <td><%= food_truck.MF_close %></td>
-        <td><%= food_truck.Sa_open %></td>
-        <td><%= food_truck.Sa_close %></td>
-        <td><%= food_truck.Su_open %></td>
-        <td><%= food_truck.Su_close %></td>
-        <td><%= food_truck.genreBig %></td>
-        <td><%= food_truck.genreSmall1 %></td>
-        <td><%= food_truck.genreSmall2 %></td>
-        <td><%= food_truck.location %></td>
-        <td><%= food_truck.blurb %></td>
-        <td><%= food_truck.long %></td>
-        <td><%= food_truck.lat %></td>
-        <td><%= food_truck.intersection %></td>
-        <td><%= link_to 'Show', food_truck %></td>
-        <td><%= link_to 'Edit', edit_food_truck_path(food_truck) %></td>
-        <td><%= link_to 'Destroy', food_truck, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<% @food_trucks.each do |food_truck| %>
+  <h3><%= link_to food_truck.name, food_truck%></h3>
+  <span class="stars pull-right"><%= food_truck.rating %></span>
+  <p><%= food_truck.intersection %></p>
+  <% unless food_truck.phone == "0" %>
+    <a href="tel:<%= food_truck.phone %>">
+      <p><%= number_to_phone food_truck.phone, area_code: true %></p>
+    </a>
+  <% end %>
+  <p><%= food_truck.genres %></p>
+  <% if current_user.admin %>
+    <%= link_to 'Show', food_truck %> |
+    <%= link_to 'Edit', edit_food_truck_path(food_truck) %> |
+    <%= link_to 'Delete', food_truck, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <% end %>
+  <hr/>
+<% end %>
 
 <br>
 

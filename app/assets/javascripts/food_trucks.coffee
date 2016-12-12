@@ -13,5 +13,5 @@ $.fn.stars = ->
     # Replace the numerical value with stars
     $(this).html $span
 
-$ ->
+document.addEventListener 'turbolinks:load', ->
   $('span.stars').stars()

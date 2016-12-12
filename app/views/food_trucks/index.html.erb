@@ -12,7 +12,7 @@
     </a>
   <% end %>
   <p><%= food_truck.genres %></p>
-  <% if current_user.admin %>
+  <% if user_signed_in? && current_user.admin %>
     <%= link_to 'Show', food_truck %> |
     <%= link_to 'Edit', edit_food_truck_path(food_truck) %> |
     <%= link_to 'Delete', food_truck, method: :delete, data: { confirm: 'Are you sure?' } %>

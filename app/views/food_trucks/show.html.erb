@@ -68,5 +68,23 @@
   <%= @food_truck.intersection %>
 </p>
 
+<h3>Ratings and Reviews</h3>
+
+<% @food_truck.recent_reviews.each do |review| %>
+  <h4><%= review.title %></h4>
+  <strong>
+      Quality: <%= review.quality %>,
+      Quantity: <%= review.quantity %>,
+      Speed: <%= review.speed %>,
+      Friendliness: <%= review.friendliness %>,
+      Bang for the Buck: <%= review.bang %>
+  </strong>
+  <% if !review.comment.blank? %>
+    <p><%= review.comment %> –<em><%= review.owner %></em></p>
+  <% end %>
+<% end %>
+
+<hr/>
+
 <%= link_to 'Edit', edit_food_truck_path(@food_truck) %> |
 <%= link_to 'Back', food_trucks_path %>

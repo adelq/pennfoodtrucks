@@ -1,6 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h2><%= @food_truck.name %></h2>
+<div class="page-header">
+  <h2><%= @food_truck.name %></h2>
+</div>
 
 <p>
   <strong>Rating:</strong>
@@ -45,18 +47,8 @@
 </p>
 
 <p>
-  <strong>Genrebig:</strong>
-  <%= @food_truck.genreBig %>
-</p>
-
-<p>
-  <strong>Genresmall1:</strong>
-  <%= @food_truck.genreSmall1 %>
-</p>
-
-<p>
-  <strong>Genresmall2:</strong>
-  <%= @food_truck.genreSmall2 %>
+  <strong>Genre:</strong>
+  <%= @food_truck.genres %>
 </p>
 
 <p>

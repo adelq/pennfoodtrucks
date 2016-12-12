@@ -24,4 +24,8 @@ class FoodTruck < ActiveRecord::Base
       'Sa'
     end
   end
+
+  def genres
+    [genreBig, genreSmall1, genreSmall2].reject { |genre| genre == 'NULL' }.join(', ')
+  end
 end

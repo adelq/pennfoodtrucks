@@ -1,23 +1,17 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @food_truck.name %>
-</p>
-
-<p>
-  <strong>Cleanurl:</strong>
-  <%= @food_truck.cleanURL %>
-</p>
+<h2><%= @food_truck.name %></h2>
 
 <p>
   <strong>Rating:</strong>
-  <%= @food_truck.rating %>
+  <%= number_with_precision @food_truck.rating, precision: 2 %>
 </p>
 
 <p>
   <strong>Phone:</strong>
-  <%= @food_truck.phone %>
+  <a href="tel:<%= @food_truck.phone %>">
+    <%= number_to_phone @food_truck.phone, area_code: true %>
+  </a>
 </p>
 
 <p>
@@ -70,20 +64,12 @@
   <%= @food_truck.location %>
 </p>
 
+<% if @food_truck.blurb != 'NULL' %>
+<h3>Description</h3>
 <p>
-  <strong>Blurb:</strong>
   <%= @food_truck.blurb %>
 </p>
-
-<p>
-  <strong>Long:</strong>
-  <%= @food_truck.long %>
-</p>
-
-<p>
-  <strong>Lat:</strong>
-  <%= @food_truck.lat %>
-</p>
+<% end %>
 
 <p>
   <strong>Intersection:</strong>

@@ -84,9 +84,8 @@
   <% if !review.comment.blank? %>
     <p><%= review.comment %> –<em><%= review.owner %></em></p>
   <% end %>
+  <hr/>
 <% end %>
-
-<hr/>
 
 <%= link_to 'Edit', edit_food_truck_path(@food_truck) %> |
 <%= link_to 'Back', food_trucks_path %>

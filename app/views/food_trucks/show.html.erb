@@ -9,12 +9,14 @@
   <%= number_with_precision @food_truck.rating, precision: 2 %>
 </p>
 
+<% if @food_truck.phone != "0" %>
 <p>
   <strong>Phone:</strong>
   <a href="tel:<%= @food_truck.phone %>">
     <%= number_to_phone @food_truck.phone, area_code: true %>
   </a>
 </p>
+<% end %>
 
 <p>
   <strong>Mf open:</strong>

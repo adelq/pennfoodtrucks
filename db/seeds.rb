@@ -19,6 +19,7 @@ csv.each do |row|
   # Unescape HTML entities (ex: Chris&#39;s => Chris's)
   ft.name = CGI.unescapeHTML(ft.name)
   ft.blurb = CGI.unescapeHTML(ft.blurb)
+  ft.save
   puts "#{ft.name} saved"
 end
 
@@ -66,6 +67,7 @@ csv.each do |row|
   rv.food_truck_id = food_truck_id
   # Unescape HTML entities (ex: Chris&#39;s => Chris's)
   rv.comment = CGI.unescapeHTML(rv.comment)
+  rv.save
   puts "Review ##{rv.id} for #{rv.food_truck.name} saved"
 end
 

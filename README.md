@@ -21,7 +21,7 @@ To get started, just run:
  - [X] Food Trucks
  - [X] Reviews
  - [X] Design/UI/UX
- - [ ] User Favorites
+ - [X] User Favorites
  - [ ] New food truck form
  - [ ] Review form
  - [ ] Suggestions

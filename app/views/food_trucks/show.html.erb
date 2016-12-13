@@ -5,6 +5,14 @@
   <h2><%= @food_truck.name %></h2>
 </div>
 
+<% if user_signed_in? %>
+  <% unless current_user.favs.exists?(id: @food_truck.id) %>
+    <%= link_to 'Add to favorites', favorites_path(food_truck_id: @food_truck), method: :post, class: "btn btn-primary pull-right" %>
+  <% else %>
+    <%= link_to 'Remove from favorites', favorite_path(@food_truck), method: :delete, class: "btn btn-primary pull-right" %>
+  <% end %>
+<% end %>
+
 <p>
   <strong>Rating:</strong>
   <%= number_with_precision @food_truck.rating, precision: 2 %>

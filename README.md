@@ -24,7 +24,7 @@ To get started, just run:
  - [X] User Favorites
  - [ ] New food truck form
  - [ ] Review form
- - [ ] Suggestions
+ - [X] Suggestions
  - [ ] Edit review
  - [X] Show by genre
 

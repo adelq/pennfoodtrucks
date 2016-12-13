@@ -1,5 +1,7 @@
 class FoodTrucksController < ApplicationController
   before_action :set_food_truck, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:new, :create]
+  before_action :verify_is_admin, only: [:edit, :update, :destroy]
 
   # GET /food_trucks
   # GET /food_trucks.json
@@ -81,5 +83,9 @@ class FoodTrucksController < ApplicationController
                                        :Su_open, :Su_close, :genreBig,
                                        :genreSmall1, :genreSmall2, :location,
                                        :blurb, :long, :lat, :intersection)
+  end
+
+  def verify_is_admin
+    redirect_to(root_path) if current_user.nil? && !current_user.admin
   end
 end

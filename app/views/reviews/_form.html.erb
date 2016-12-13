@@ -11,26 +11,21 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :food_truck_id %><br>
-    <%= f.text_field :food_truck_id %>
-  </div>
+  <%= hidden_field_tag 'food_truck_id', params[:food_truck_id] %>
   <div class="field">
     <%= f.label :title %><br>
     <%= f.text_area :title %>
   </div>
   <div class="field">
-    <%= f.label :owner %><br>
+    <%= f.label :owner, 'Author' %><br>
     <%= f.text_area :owner %>
   </div>
+  <% if !user_signed_in? %>
   <div class="field">
     <%= f.label :email %><br>
     <%= f.text_area :email %>
   </div>
-  <div class="field">
-    <%= f.label :date %><br>
-    <%= f.datetime_select :date %>
-  </div>
+  <% end %>
   <div class="field">
     <%= f.label :comment %><br>
     <%= f.text_area :comment %>
@@ -52,24 +47,12 @@
     <%= f.text_field :quantity %>
   </div>
   <div class="field">
-    <%= f.label :bang %><br>
+    <%= f.label :bang, 'Bang for the buck' %><br>
     <%= f.text_field :bang %>
   </div>
   <div class="field">
     <%= f.label :friendliness %><br>
     <%= f.text_field :friendliness %>
-  </div>
-  <div class="field">
-    <%= f.label :display_rev %><br>
-    <%= f.check_box :display_rev %>
-  </div>
-  <div class="field">
-    <%= f.label :owner_ip %><br>
-    <%= f.text_field :owner_ip %>
-  </div>
-  <div class="field">
-    <%= f.label :staff %><br>
-    <%= f.check_box :staff %>
   </div>
   <div class="actions">
     <%= f.submit %>

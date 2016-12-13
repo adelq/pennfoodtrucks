@@ -2,7 +2,7 @@
 
 <p>
   <strong>Food truck:</strong>
-  <%= @review.food_truck %>
+  <%= @review.food_truck.name %>
 </p>
 
 <p>
@@ -60,20 +60,5 @@
   <%= @review.friendliness %>
 </p>
 
-<p>
-  <strong>Display rev:</strong>
-  <%= @review.display_rev %>
-</p>
-
-<p>
-  <strong>Owner ip:</strong>
-  <%= @review.owner_ip %>
-</p>
-
-<p>
-  <strong>Staff:</strong>
-  <%= @review.staff %>
-</p>
-
 <%= link_to 'Edit', edit_review_path(@review) %> |
-<%= link_to 'Back', reviews_path %>
+<%= link_to 'Back', food_truck_path(@review.food_truck) %>

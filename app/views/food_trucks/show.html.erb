@@ -58,6 +58,10 @@
 
 <h3>Ratings and Reviews</h3>
 
+<strong>
+  <%= link_to 'Add your own review', new_review_path(food_truck_id: @food_truck.id) %>
+</strong>
+
 <% @food_truck.recent_reviews.each do |review| %>
   <h4><%= review.title %></h4>
   <% if user_signed_in? && current_user.admin %>

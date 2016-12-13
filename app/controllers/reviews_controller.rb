@@ -25,6 +25,11 @@ class ReviewsController < ApplicationController
   # POST /reviews.json
   def create
     @review = Review.new(review_params)
+    @review.food_truck = FoodTruck.find(params[:food_truck_id])
+    @review.date = Time.now
+    @review.owner_ip = request.remote_ip
+    @review.staff = false
+    @review.email = current_user.email if @review.email.blank? && user_signed_in?
 
     respond_to do |format|
       if @review.save

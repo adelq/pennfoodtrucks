@@ -7,6 +7,12 @@ class FoodTrucksController < ApplicationController
     @food_trucks = FoodTruck.all
   end
 
+  # GET /food_trucks/sort?genre=Middle-Eastern
+  def genre
+    @food_trucks = FoodTruck.where('genreBig = :genre or genreSmall1 = :genre or genreSmall2 = :genre', { genre: params[:genre] })
+    render :index
+  end
+
   # GET /food_trucks/1
   # GET /food_trucks/1.json
   def show

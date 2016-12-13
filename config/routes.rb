@@ -10,6 +10,9 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'welcome#index'
 
+  # List by genre
+  get 'sort' => 'food_trucks#genre'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

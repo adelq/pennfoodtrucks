@@ -76,5 +76,7 @@
   <hr/>
 <% end %>
 
-<%= link_to 'Edit', edit_food_truck_path(@food_truck) %> |
+<% if user_signed_in? && current_user.admin %>
+  <%= link_to 'Edit', edit_food_truck_path(@food_truck) %> |
+<% end %>
 <%= link_to 'Back', food_trucks_path %>

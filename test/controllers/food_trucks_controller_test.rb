@@ -1,6 +1,8 @@
 require 'test_helper'
 
 class FoodTrucksControllerTest < ActionController::TestCase
+  include Devise::Test::ControllerHelpers
+
   setup do
     @food_truck = food_trucks(:ft)
   end

@@ -1,6 +1,8 @@
 require 'test_helper'
 
 class VisitsControllerTest < ActionController::TestCase
+  include Devise::Test::ControllerHelpers
+
   setup do
     @visit = visits(:one)
   end

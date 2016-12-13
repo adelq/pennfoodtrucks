@@ -1,6 +1,8 @@
 require 'test_helper'
 
 class FoodsControllerTest < ActionController::TestCase
+  include Devise::Test::ControllerHelpers
+
   setup do
     @food = foods(:one)
   end

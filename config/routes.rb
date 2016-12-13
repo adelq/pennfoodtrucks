@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'welcome#index'
 
+  # List of genres
+  get 'genres' => 'food_trucks#genre_index'
   # List by genre
   get 'sort' => 'food_trucks#genre'
 

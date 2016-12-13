@@ -15,6 +15,10 @@ class FoodTrucksController < ApplicationController
     render :index
   end
 
+  def genre_index
+    @genres = FoodTruck.distinct.pluck(:genreBig)
+  end
+
   # GET /food_trucks/1
   # GET /food_trucks/1.json
   def show

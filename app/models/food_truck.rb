@@ -1,6 +1,7 @@
 # coding: utf-8
 class FoodTruck < ActiveRecord::Base
-  has_many :reviews
+  has_many :reviews, dependent: :destroy
+  has_many :favorites, dependent: :destroy
   has_many :followers, through: :favorites, source: :user
 
   validates :lat, numericality: { greater_than_or_equal_to:  -90, less_than_or_equal_to:  90 }

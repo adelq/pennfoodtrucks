@@ -10,7 +10,7 @@
 <% @food_trucks.each do |food_truck| %>
   <h3><%= link_to food_truck.name, food_truck%></h3>
   <span class="stars pull-right"><%= food_truck.rating %></span>
-  <p>Location: <%= food_truck.intersection %></p>
+  <p>Location: <%= location_link food_truck %></p>
   <% unless food_truck.phone == "0" %>
     <a href="tel:<%= food_truck.phone %>">
       <p>Phone: <%= number_to_phone food_truck.phone, area_code: true %></p>

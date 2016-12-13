@@ -27,7 +27,7 @@ class FoodTruck < ActiveRecord::Base
   end
 
   def genres
-    [genreBig, genreSmall1, genreSmall2].reject { |genre| genre == 'NULL' }.join(', ')
+    [genreBig, genreSmall1, genreSmall2].reject { |genre| genre == 'NULL' }
   end
 
   def recent_reviews

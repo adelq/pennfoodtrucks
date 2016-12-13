@@ -5,13 +5,16 @@
 <% @food_trucks.each do |food_truck| %>
   <h3><%= link_to food_truck.name, food_truck%></h3>
   <span class="stars pull-right"><%= food_truck.rating %></span>
-  <p><%= food_truck.intersection %></p>
+  <p>Location: <%= food_truck.intersection %></p>
   <% unless food_truck.phone == "0" %>
     <a href="tel:<%= food_truck.phone %>">
-      <p><%= number_to_phone food_truck.phone, area_code: true %></p>
+      <p>Phone: <%= number_to_phone food_truck.phone, area_code: true %></p>
     </a>
   <% end %>
-  <p><%= food_truck.genres %></p>
+  <p>Genre: <%= food_truck.genres %></p>
+  <% if !food_truck.hours_listing.empty? %>
+    <p>Hours: <%= food_truck.hours_listing.to_sentence %></p>
+  <% end %>
   <% if user_signed_in? && current_user.admin %>
     <%= link_to 'Show', food_truck %> |
     <%= link_to 'Edit', edit_food_truck_path(food_truck) %> |

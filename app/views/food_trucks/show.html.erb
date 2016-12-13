@@ -18,35 +18,12 @@
 </p>
 <% end %>
 
+<% if !@food_truck.hours_listing.empty? %>
 <p>
-  <strong>Mf open:</strong>
-  <%= @food_truck.MF_open %>
+  <strong>Hours:</strong>
+  <%= @food_truck.hours_listing.to_sentence %>
 </p>
-
-<p>
-  <strong>Mf close:</strong>
-  <%= @food_truck.MF_close %>
-</p>
-
-<p>
-  <strong>Sa open:</strong>
-  <%= @food_truck.Sa_open %>
-</p>
-
-<p>
-  <strong>Sa close:</strong>
-  <%= @food_truck.Sa_close %>
-</p>
-
-<p>
-  <strong>Su open:</strong>
-  <%= @food_truck.Su_open %>
-</p>
-
-<p>
-  <strong>Su close:</strong>
-  <%= @food_truck.Su_close %>
-</p>
+<% end %>
 
 <p>
   <strong>Genre:</strong>

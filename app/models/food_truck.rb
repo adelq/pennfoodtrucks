@@ -1,3 +1,4 @@
+# coding: utf-8
 class FoodTruck < ActiveRecord::Base
   has_many :reviews
 
@@ -31,5 +32,21 @@ class FoodTruck < ActiveRecord::Base
 
   def recent_reviews
     reviews.order('date DESC')
+  end
+
+  def hour_to_time(hour)
+    # Time is stored as 24hr decimal (ex: 15.5)
+    Time.at(hour.to_f * 60 * 60).utc.strftime('%l:%M%p').strip
+  end
+
+  def hours_listing
+    hours = []
+    %w(MF Sa Su).each do |day|
+      next if self["#{day}_open"].blank?
+      open = hour_to_time(self["#{day}_open"])
+      close = hour_to_time(self["#{day}_close"])
+      hours << "#{open} – #{close} (#{day})"
+    end
+    hours
   end
 end

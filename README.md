@@ -25,7 +25,6 @@ To get started, just run:
  - [ ] New food truck form
  - [ ] Review form
  - [ ] Suggestions
- - [ ] Sort by distance
  - [ ] Edit review
  - [X] Show by genre
 

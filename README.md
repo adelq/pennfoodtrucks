@@ -22,7 +22,7 @@ To get started, just run:
  - [X] Reviews
  - [X] Design/UI/UX
  - [X] User Favorites
- - [ ] New food truck form
+ - [X] New food truck form
  - [ ] Review form
  - [X] Suggestions
  - [X] Edit review

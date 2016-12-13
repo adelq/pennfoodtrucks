@@ -37,6 +37,9 @@ class FoodTrucksController < ApplicationController
   # POST /food_trucks.json
   def create
     @food_truck = FoodTruck.new(food_truck_params)
+    @food_truck.cleanURL = @food_truck.name
+                                      .tr(' ', '-')
+                                      .gsub(/[^0-9A-Za-z]/, '')
 
     respond_to do |format|
       if @food_truck.save

@@ -27,7 +27,7 @@ To get started, just run:
  - [ ] Suggestions
  - [ ] Sort by distance
  - [ ] Edit review
- - [ ] Show by genre
+ - [X] Show by genre
 
 ## Author and License
 

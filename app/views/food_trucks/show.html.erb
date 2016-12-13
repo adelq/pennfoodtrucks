@@ -60,6 +60,9 @@
 
 <% @food_truck.recent_reviews.each do |review| %>
   <h4><%= review.title %></h4>
+  <% if user_signed_in? && current_user.admin %>
+    <p class="pull-right"><%= link_to 'Edit', edit_review_path(review) %></p>
+  <% end %>
   <strong>
       Quality: <%= review.quality %>,
       Quantity: <%= review.quantity %>,

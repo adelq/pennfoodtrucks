@@ -18,9 +18,16 @@ To get started, just run:
  - [X] Data import
  - [X] Homepage
  - [X] Users + Login
- - [ ] Food Trucks
- - [ ] Reviews
- - [ ] Design/UI/UX
+ - [X] Food Trucks
+ - [X] Reviews
+ - [X] Design/UI/UX
+ - [ ] User Favorites
+ - [ ] New food truck form
+ - [ ] Review form
+ - [ ] Suggestions
+ - [ ] Sort by distance
+ - [ ] Edit review
+ - [ ] Show by genre
 
 ## Author and License
 

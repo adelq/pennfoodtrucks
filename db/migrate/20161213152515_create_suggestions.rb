@@ -3,7 +3,7 @@ class CreateSuggestions < ActiveRecord::Migration
     create_table :suggestions do |t|
       t.text :title
       t.text :body
-      t.enum :status
+      t.integer :status
 
       t.timestamps null: false
     end

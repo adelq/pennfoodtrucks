@@ -25,6 +25,7 @@ class SuggestionsController < ApplicationController
   # POST /suggestions.json
   def create
     @suggestion = Suggestion.new(suggestion_params)
+    @suggestion.waiting!
 
     respond_to do |format|
       if @suggestion.save

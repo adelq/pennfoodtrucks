@@ -11,7 +11,7 @@ class FoodTrucksController < ApplicationController
 
   # GET /food_trucks/sort?genre=Middle-Eastern
   def genre
-    @food_trucks = FoodTruck.where('genreBig = :genre or genreSmall1 = :genre or genreSmall2 = :genre', { genre: params[:genre] })
+    @food_trucks = FoodTruck.where('"genreBig" = :genre or "genreSmall1" = :genre or "genreSmall2" = :genre', { genre: params[:genre] })
     render :index
   end
 

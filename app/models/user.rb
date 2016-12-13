@@ -5,5 +5,5 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :reviews, dependent: :destroy
-  has_many :favorites, class_name: 'FoodTruck'
+  has_many :favorites, through: :favorites, source: :food_truck
 end

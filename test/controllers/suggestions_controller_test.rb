@@ -1,6 +1,8 @@
 require 'test_helper'
 
 class SuggestionsControllerTest < ActionController::TestCase
+  include Devise::Test::ControllerHelpers
+
   setup do
     @suggestion = suggestions(:one)
   end

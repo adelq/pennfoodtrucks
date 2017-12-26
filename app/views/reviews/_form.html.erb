@@ -11,7 +11,7 @@
     </div>
   <% end %>
 
-  <%= hidden_field_tag 'food_truck_id', params[:food_truck_id] %>
+  <%= hidden_field_tag 'review[food_truck_id]', params[:food_truck_id] %>
   <div class="field">
     <%= f.label :title %><br>
     <%= f.text_area :title %>

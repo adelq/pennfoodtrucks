@@ -31,3 +31,5 @@ To get started, just run:
 ## Author and License
 
 Adel Qalieh, [AGPLv3 Licensed](LICENSE)
+
+Data provided under [Creative Commons BY-NC 3.0](https://creativecommons.org/licenses/by-nc/3.0/)

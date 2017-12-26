@@ -23,7 +23,7 @@
 <h2>Featured Truck: <%= link_to @featured.name, @featured %></h2>
 
 <p>
-    <%= @featured.blurb %>
+    <%= @featured.blurb.html_safe %>
 </p>
 
 <script>

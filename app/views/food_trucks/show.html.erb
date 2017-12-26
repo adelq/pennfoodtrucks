@@ -47,7 +47,7 @@
 <% if @food_truck.blurb != 'NULL' %>
 <h3>Description</h3>
 <p>
-  <%= @food_truck.blurb %>
+  <%= @food_truck.blurb.html_safe %>
 </p>
 <% end %>
 

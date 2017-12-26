@@ -30,4 +30,4 @@ To get started, just run:
 
 ## Author and License
 
-Adel Qalieh, [MIT Licensed](LICENSE)
+Adel Qalieh, [AGPLv3 Licensed](LICENSE)

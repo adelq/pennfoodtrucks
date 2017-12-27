@@ -1,4 +1,3 @@
-# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -18,10 +17,9 @@ ActiveRecord::Schema.define(version: 20161213152515) do
     t.integer  "food_truck_id"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+    t.index ["food_truck_id"], name: "index_favorites_on_food_truck_id"
+    t.index ["user_id"], name: "index_favorites_on_user_id"
   end
-
-  add_index "favorites", ["food_truck_id"], name: "index_favorites_on_food_truck_id"
-  add_index "favorites", ["user_id"], name: "index_favorites_on_user_id"
 
   create_table "food_trucks", force: :cascade do |t|
     t.text     "name"
@@ -54,9 +52,8 @@ ActiveRecord::Schema.define(version: 20161213152515) do
     t.integer  "food_truck_id"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+    t.index ["food_truck_id"], name: "index_foods_on_food_truck_id"
   end
-
-  add_index "foods", ["food_truck_id"], name: "index_foods_on_food_truck_id"
 
   create_table "reviews", force: :cascade do |t|
     t.integer  "food_truck_id"
@@ -76,9 +73,8 @@ ActiveRecord::Schema.define(version: 20161213152515) do
     t.boolean  "staff"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+    t.index ["food_truck_id"], name: "index_reviews_on_food_truck_id"
   end
-
-  add_index "reviews", ["food_truck_id"], name: "index_reviews_on_food_truck_id"
 
   create_table "suggestions", force: :cascade do |t|
     t.text     "title"
@@ -102,10 +98,9 @@ ActiveRecord::Schema.define(version: 20161213152515) do
     t.datetime "created_at",                             null: false
     t.datetime "updated_at",                             null: false
     t.boolean  "admin",                  default: false
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
-
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 
   create_table "visits", force: :cascade do |t|
     t.datetime "timestamp"
@@ -114,8 +109,7 @@ ActiveRecord::Schema.define(version: 20161213152515) do
     t.integer  "food_truck_id"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+    t.index ["food_truck_id"], name: "index_visits_on_food_truck_id"
   end
-
-  add_index "visits", ["food_truck_id"], name: "index_visits_on_food_truck_id"
 
 end

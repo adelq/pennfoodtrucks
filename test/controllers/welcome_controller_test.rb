@@ -1,10 +1,10 @@
 require 'test_helper'
 
-class WelcomeControllerTest < ActionController::TestCase
-  include Devise::Test::ControllerHelpers
+class WelcomeControllerTest < ActionDispatch::IntegrationTest
+  include Devise::Test::IntegrationHelpers
 
   test "should get index" do
-    get :index
+    get root_url
     assert_response :success
   end
 

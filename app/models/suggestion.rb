@@ -1,4 +1,4 @@
-class Suggestion < ActiveRecord::Base
+class Suggestion < ApplicationRecord
   enum status: {
     accepted: 0,
     rejected: 1,

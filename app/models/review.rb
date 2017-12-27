@@ -1,3 +1,3 @@
-class Review < ActiveRecord::Base
+class Review < ApplicationRecord
   belongs_to :food_truck
 end

@@ -1,5 +1,5 @@
 # coding: utf-8
-class FoodTruck < ActiveRecord::Base
+class FoodTruck < ApplicationRecord
   has_many :reviews, dependent: :destroy
   has_many :favorites, dependent: :destroy
   has_many :followers, through: :favorites, source: :user

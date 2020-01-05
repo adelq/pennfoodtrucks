@@ -1,0 +1,24 @@
+name: Heroku
+on:
+  release:
+    types: [published]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+    - name: Set up Ruby 2.6
+      uses: actions/setup-ruby@v1
+      with:
+        ruby-version: 2.6.x
+    - name: Install databases
+      run: sudo apt-get -y install libpq-dev libsqlite3-dev
+    - name: Build and test with Rake
+      run: |
+        gem install bundler
+        bundle install --jobs 4 --retry 3
+        bundle exec rake
+    - name: Deploy to Heroku
+      run: git push https://heroku:$HEROKU_API_TOKEN@git.heroku.com/pennfoodtrucks.git origin/master:master

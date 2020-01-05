@@ -1,7 +1,7 @@
 # Penn Food Trucks
 
 [![Travis Build Status](https://travis-ci.org/adelq/pennfoodtrucks.svg?branch=master)](https://travis-ci.org/adelq/pennfoodtrucks)
-![GitHub Build Status](https://github.com/adelq/pennfoodtrucks/workflows/ruby/badge.svg)
+![GitHub Build Status](https://github.com/adelq/pennfoodtrucks/workflows/CI/badge.svg)
 
 An experimental version of the http://pennfoodtrucks.com/ using Rails and data
 obtained from the original site.

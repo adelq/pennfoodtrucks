@@ -21,4 +21,6 @@ jobs:
         bundle install --jobs 4 --retry 3
         bundle exec rake
     - name: Deploy to Heroku
+      env:
+        HEROKU_API_TOKEN: ${{ secrets.HEROKU_API_TOKEN }}
       run: git push https://heroku:$HEROKU_API_TOKEN@git.heroku.com/pennfoodtrucks.git HEAD:master
